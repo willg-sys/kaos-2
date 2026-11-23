@@ -1,0 +1,6 @@
+(version 1)
+# KiCad 8+ syntax. Edge-mount SMA ground/signal pads wrap the board edge by design.
+(rule "Edge-mount SMA pads"
+  (condition "A.memberOfFootprint('J3') || A.memberOfFootprint('J5')")
+  (constraint edge_clearance (min 0mm))
+  (severity ignore))
